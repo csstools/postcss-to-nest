@@ -1,0 +1,32 @@
+.foo .bar .pre.sun, .qux {
+	color: black;
+	font-family: "Helvetica Neue";
+}
+
+.foo {
+
+	@nest & .bar {
+		color: red;
+		font-family: "Arial";
+
+		@nest & .qux {
+			color: white;
+			font-family: "Helvetica Neue";
+		}
+
+		@nest & .pre {
+			color: blue;
+			font-family: "Helvetica Neue";
+
+			@nest &.mon {
+				color: yellow;
+				font-family: "Helvetica Neue";
+			}
+
+			@nest &.tue {
+				color: green;
+				font-family: "Helvetica Neue";
+			}
+		}
+	}
+}
